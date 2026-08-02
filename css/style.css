@@ -1,0 +1,257 @@
+/* Variables */
+:root {
+    /* Brand */
+    --yellow: #f4ce14;
+    --green: #495e57;
+    /* Neutrals */
+    --black: #000000;
+    --white: #ffffff;
+    --off-white: #edefee;
+    --gray: #333333;
+    /* Optional helpers */
+    --green-dark: #333d37;
+    --yellow-soft: #fbdabb;
+
+    --transition: all 0.5s ease-in-out;
+  }
+
+/* General */
+
+* {
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+html,
+body,
+ul,
+li,
+figure,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+button {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    outline: none;
+}
+
+a:focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 2px;
+}
+
+button {
+    appearance: none;
+    border: none;
+    font: inherit;
+    cursor: pointer;
+}
+
+button:focus-visible {
+    outline: 2px solid var(--yellow-soft);
+    outline-offset: 2px;
+}
+
+.width-100 {
+    width: 100%;
+}
+
+.width-50 {
+    width: 50%;
+}
+
+.width-33 {
+    width: 100%;
+}
+
+@media(min-width: 992px) {
+    .width-33 {
+        width: 33.33%;
+    }
+}
+
+.primary-button {
+    background: var(--yellow);
+    color: var(--green-dark);
+    display: block;
+    font-weight: bold;
+    margin-block: 1.25rem;
+    margin-inline: auto;
+    padding: 1rem;
+    transition: var(--transition);
+    width: max(200px, 20vw);
+}
+
+.primary-button:hover {
+    background: var(--yellow-soft);
+    transition: var(--transition) ;
+}
+
+/* Header */
+
+.main-header {
+    display: flex;
+    height: 25vh;
+    width: 100%;
+}
+
+.main-header img {
+    margin: auto;
+    width: max(250px, 30vw);
+}
+
+/* Navigetion */
+
+.main-navigation {
+    padding-inline: max(20px, 5vw);
+    margin-block: max(20px, 5vh);
+    width: 100%;
+}
+
+.main-navigation_links {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.main-navigation_link {
+    border-bottom: 2px solid transparent;
+    color: var(--green);
+    font-weight: normal;
+    padding-bottom: 0.15rem;
+    transition: var(--transition);
+}
+
+.main-navigation_link:hover {
+    border-color: var(--green);
+    font-weight: bold;
+    transition: var(--transition);
+}
+
+/* Banner */
+
+.banner-content {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    text-align: center;
+}
+
+.banner-content img {
+    order: 2;
+}
+
+.banner-content figcaption {
+    background: var(--green-dark);
+    color: var(--off-white);
+    order: 1;
+    padding: max(15px, 2vw);
+    width: 100%;
+}
+
+@media (min-width: 992px) {
+    .banner-content figcaption {
+        background: rgb(from var(--green-dark) r g b / 50%);
+        left: 50%;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        top: 50%;
+    }
+}
+
+.banner-content figcaption h3 {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+}
+
+.banner-content figcaption p {
+    font-size: 1.15rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+    margin-inline: auto;
+}
+
+@media (min-width: 992px) {
+    .banner-content figcaption p {
+        max-width: 45%;
+    }
+}
+
+/* Information */
+
+.main-content_info {
+    background: var(--green);
+    display: flex;
+    flex-wrap: wrap;
+    padding: max(20px, 5vw);
+}
+
+.main-content_info figure {
+    color: var(--off-white);
+    padding-block: max(20px, 2vw);
+    text-align: center;
+    transition: var(--transition);
+}
+
+.main-content_info figure:hover {
+    background: rgb(from var(--green-dark) r g b / 50%);
+    transition: var(--transition);
+}
+
+.main-content_info figure > * {
+    display: block;
+    margin: auto;
+    max-width: 80%;
+}
+
+.main-content_info img {
+    margin-bottom: 1rem;
+}
+
+.main-content_info figcaption h4 {
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+}
+
+.main-content_info figcaption p {
+    line-height: 1.5;
+}
+
+
+/* Footer */
+
+.main-footer {
+    align-items: center;
+    background: var(--yellow);
+    display: flex;
+    padding: max(20px, 3vw);
+}
+
+.main-footer p {
+    text-align: right;
+}
+
+.main-footer_logo {
+    width: max(180px, 17vw);
+}
