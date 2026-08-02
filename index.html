@@ -30,48 +30,49 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
     <header class="main-header">
         <img class="main-header_logo" src="./images/logo-yellow.png" alt="Little Lemon Logo">
     </header>
-    <nav class="main-navigation">
+    <nav class="main-navigation" aria-label="Primary">
         <ul class="main-navigation_links">
-            <li><a href="#" class="main-navigation_link">Home</a></li>
+            <li><a href="index.html" class="main-navigation_link" aria-current="page">Home</a></li>
             <li><a href="#" class="main-navigation_link">About</a></li>
             <li><a href="#" class="main-navigation_link">Reservations</a></li>
             <li><a href="#" class="main-navigation_link">Contact</a></li>
         </ul>
     </nav>
-    <main class="main-content">
-        <section class="main-content_banner">
+    <main class="main-content" id="main-content" tabindex="-1">
+        <section class="main-content_banner" aria-labelledby="promo-heading">
             <figure class="banner-content width-100">
-                <img src="./images/main-banner-picture.png" alt="Promotional Banner">
+                <img src="./images/main-banner-picture.png" alt="Square table with Mediterranean dishes and half-filled wine glasses on a seaside terrace overlooking the ocean at sunset.">
                 <figcaption>
-                    <h3>Sunset Feast Special</h3>
+                    <h1 id="promo-heading">Sunset Feast Special</h1>
                     <p><strong>Golden sunsets. Mediterranean flavors. Unforgettable moments.</strong></p>
                     <p>Enjoy our Sunset Feast for Two from 5:30–7:30 PM with two entrées, a shared appetizer, dessert, and two glasses of wine—all for $69.</p>
-                    <a href="#" class="primary-button">Learn More</a>
+                    <a href="#" class="primary-button" aria-label="Learn more about the Sunset Feast Special">Learn More</a>
                 </figcaption>
             </figure>
         </section>
-        <section class="main-content_info">
+        <section class="main-content_info" aria-label="Highlights">
             <figure class="width-33">
                 <img src="./images/information-1.png" alt="Fresh Mediterranean ingredients including olive oil, tomatoes, lemons, herbs, olives, artisan bread, and fresh fish arranged on a rustic wooden table.">
                 <figcaption>
-                    <h4>Fresh Ingredients</h4>
+                    <h2>Fresh Ingredients</h2>
                     <p>Every dish begins with carefully selected seasonal produce, fresh seafood, and premium olive oil, bringing the authentic flavors of the Mediterranean to every plate.</p>
                 </figcaption>
             </figure>
             <figure class="width-33">
                 <img src="./images/information-2.png" alt="Guests enjoying dinner on a Mediterranean seaside terrace overlooking the ocean at sunset with warm ambient lighting.">
                 <figcaption>
-                    <h4>Oceanfront Dining</h4>
+                    <h2>Oceanfront Dining</h2>
                     <p>Relax on our open-air terrace with panoramic sea views, where every meal is accompanied by the sound of the waves and breathtaking sunsets.</p>
                 </figcaption>
             </figure>
             <figure class="width-33">
                 <img src="./images/information-3.png" alt="Beautifully plated Mediterranean fish entrée served with a glass of white wine in a sunlit seaside restaurant.">
                 <figcaption>
-                    <h4>Handcrafted Flavors</h4>
+                    <h2>Handcrafted Flavors</h2>
                     <p>From traditional family recipes to modern Mediterranean classics, every dish is prepared with passion and paired with a carefully curated wine selection.</p>
                 </figcaption>
             </figure>
@@ -79,7 +80,7 @@
     </main>
     <footer class="main-footer">
         <div class="width-50">
-            <img src="./images/logo-green.png" alt="Little Lemon Logo" class="main-footer_logo">
+            <img src="./images/logo-green.png" alt="" class="main-footer_logo">
         </div>
         <div class="width-50"><p>Copyright Little Lemon</p></div>
     </footer>
